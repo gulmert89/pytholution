@@ -9,3 +9,4 @@ if x>=0:
     print("The factorial of",x,"is",fact(x),end=".")
 else:
     print("Please avoid negative numbers.")
+    # raise ValueError("Please avoid negative numbers.")    #this is an alternative answer to entering a negative number but i just like to see a simple string instead of a scary "ValueError!!"
