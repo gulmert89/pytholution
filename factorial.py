@@ -1,9 +1,10 @@
+# Factorial of which number we would like to calculate? Let's take an input first:
 x=int(input("Enter the integer of which the factorial is to be calculated: "))
 
 def fact(x):
-    if x==0:
+    if x==0:    #you know, factorial of 0 is 1
         return 1
-    return x * fact(x-1)  #recursion practice
+    return x * fact(x-1)  #putting a recursion practice here  would be nice 
 
 if x>=0:
     print("The factorial of",x,"is",fact(x),end=".")
