@@ -14,3 +14,4 @@ print("List of the prime numbers up to",ep,"is:\n",pl)
 
 # Note to myself:
 # The meaning of "else" aligned with the "for" above: If none of "if" values are satisfied for all the "for" values, do the "else".
+# Loved this usage of "else".
