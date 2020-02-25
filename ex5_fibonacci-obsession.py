@@ -25,5 +25,5 @@ while True:
         else:
             print("Why don't you enter a positive integer?")
 
-# Note to myself: Please make the second part (or the code itself) lighter. It's recalculating the list.
+# Note to myself: Please make the second part (or the code itself) lighter. It's recalculating the list needlessly, imo.
 # This is the first time I've ever used these looping input stuff. I didn't know how to do that and the answer was just so simple.
