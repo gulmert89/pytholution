@@ -16,4 +16,4 @@ print("List of the prime numbers up to {} is:\n{}".format(ep,pl))
 # Loved this usage of "else".
 # I was a bit reluctant to use .format() while string formatting but well, it seems quite fun.
 # It was quite hard to imagine how to create a "for" under a "for" to dig out the prime numbers but a simple pencil and paper helped me.
-# I know, it's a simple code but still, I -somehow- need to make the code simpler because it divides the entire series over and over again. There was this thing about "Fermat's theorem" that states that you just need to divide the number up to its square root but I don't remember what was it exactly.).
+# I know, it's a simple code but still, I -somehow- need to make the code simpler because it divides the entire series over and over again. There was this thing about "Fermat's theorem" that states that you just need to divide the number up to its square root but I don't remember what it was exactly.).
