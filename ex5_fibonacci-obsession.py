@@ -14,14 +14,16 @@ while latter <= fibo_input1:
     former, latter = latter, (former+latter)
 print("Here the series is:\n", fibo_series)
 
-fibo_input2 = int(input("\nCurious about the nth Fibonacci element? Enter a number to find out: "))
+while True:
+    fibo_input2 = int(input("\nCurious about the nth Fibonacci element? Enter a number to find out: "))
+    if fibo_input2 != "":
+        if fibo_input2 > 0:
+            while len(fibo_series) <= fibo_input2:
+                fibo_series.append(latter)
+                former, latter = latter, (former+latter)
+            print("Your Fibonacci number is:", fibo_series[fibo_input2-1])
+        else:
+            print("Why don't you enter a positive integer?")
 
-if fibo_input2 > 0:
-    while len(fibo_series) <= fibo_input2:
-        fibo_series.append(latter)
-        former, latter = latter, (former+latter)
-    print("Your Fibonacci number is:", fibo_series[fibo_input2-1])
-else:
-    print("Why don't you enter a positive integer?")
-
-# Note to myself: Please make the second part (or the code itself) lighter. My eyes are hurt!
+# Note to myself: Please make the second part (or the code itself) lighter. It's recalculating the list.
+# This is the first time I've ever used these looping input stuff. I didn't know how to do that and the answer was just so simple.
