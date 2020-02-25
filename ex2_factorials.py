@@ -1,4 +1,4 @@
-# Factorial of which number we would like to calculate? #
+### Factorial of which number we would like to calculate? ###
 
 x = int(input("Enter the integer of which the factorial is to be calculated: "))
 
