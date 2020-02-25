@@ -1,4 +1,4 @@
-# List of prime numbers up to a user defined point #
+### List of prime numbers up to a user defined point ###
 
 ep = int(input("Enter the end point: "))    #ep: end point
 pl = []    #pl: prime list
