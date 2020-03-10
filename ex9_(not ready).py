@@ -8,7 +8,7 @@ def sol1():
     print("--- Solution 1 ---")
 #    with open("nameslist.txt", "r") as ppFile:
 #        ppText = ppFile.read()
-    ppList = ppText.split()    # old position: +1 indent (4 whitespaces)
+    ppList = ppText.split()
     ppDict = {}
     for i in ("Darth","Lea","Luke"):
         ppDict[i] = ppList.count(i)
@@ -19,7 +19,7 @@ def sol1():
 def sol2():
     print("--- Solution 2 ---")
     counter_dict = {}
-    with open("nameslist.txt") as ppFile:
+    with open("nameslist.txt") as ppFile:    # needs a local nameslist.txt file :|
         line = ppFile.readline()
         while line:
             line = line.strip()
@@ -38,7 +38,7 @@ def sol3():
 
 
 
-    # bunları kullanabilirsin
+    # you can use these:
     # str.index(sub, start, end)
     # str.find(sub, start, end)
     # the idea: take the word between the two indices of two /forward slashes/
