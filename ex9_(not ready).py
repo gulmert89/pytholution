@@ -3,11 +3,9 @@ import urllib.request as url
 ppText = url.urlopen("http://www.practicepython.org/assets/nameslist.txt").read()
 ppText = ppText.decode("utf-8")
 
-#solution 1
-def sol1():
+# my solution for Practice Python: Exercise 22
+def sol():
     print("--- Solution 1 ---")
-#    with open("nameslist.txt", "r") as ppFile:
-#        ppText = ppFile.read()
     ppList = ppText.split()
     ppDict = {}
     for i in ("Darth","Lea","Luke"):
@@ -15,26 +13,20 @@ def sol1():
     print(ppDict)
     print("Total number of names is:",len(ppList))
 
-#solution2
-def sol2():
-    print("--- Solution 2 ---")
-    counter_dict = {}
-    with open("nameslist.txt") as ppFile:    # needs a local nameslist.txt file :|
-        line = ppFile.readline()
-        while line:
-            line = line.strip()
-            if line in counter_dict:
-                counter_dict[line] += 1
-            else:
-                counter_dict[line] = 1
-            line = ppFile.readline()
-    print(counter_dict)
-
-#extra solution
-def sol3():
+# my solution for the "Extra" part of the exercise
+def sol_ext():
     print("--- Extra Solution ---")
-    with open("Training_01.txt", "r") as ppFile:
-        ppText = ppFile.read()
+    ppText_ext = url.urlopen("http://www.practicepython.org/assets/Training_01.txt").read()
+    ppText_ext = ppText_ext.decode("utf-8")
+    ppList_ext = ppText_ext.split()
+    ppDict_ext = {}
+    ppCategory = set()
+    for i in ppList_ext:    # YOU ARE CURRENTLY HERE. RETURN HERE TOMORROW
+        ppCategory.add(ppList_ext[3:ppList_ext.index("/",3,(len(ppList_ext)-1))])
+    for i in ("Darth","Lea","Luke"):
+        ppDict[i] = ppList.count(i)
+    print(ppDict)
+    print("Total number of names is:",len(ppList))
 
 
 
@@ -44,8 +36,8 @@ def sol3():
     # the idea: take the word between the two indices of two /forward slashes/
 
 
-sol1(); print("\n")
-sol2()
+sol(); print("\n")
+sol_ext()
 
 # reference webpages: https://stackoverflow.com/questions/1393324/in-python-given-a-url-to-a-text-file-what-is-the-simplest-way-to-read-the-cont
 # files: http://www.practicepython.org/solution/2014/12/14/22-read-from-file-solutions.html
