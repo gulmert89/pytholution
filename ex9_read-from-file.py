@@ -1,15 +1,17 @@
-### Read Me Good ###
+### Read From File ###
+## This is a basic file reading exercise about scraping names from the files.
+## You can open nameslist.txt and Training_01.txt files (of which the links are given below) to see what is inside them.
 
-import urllib.request as url
-# 
+import urllib.request as url 
+## I feel like I was playing in single player mode up to this point but now I have just seen how a multiplayer mode looks like.
+## It's nice to import something from the net.
 
-# my solution for Practice Python: Exercise 22
-def sol():
+def sol_1():    # my solution for "PracticePython.org - Exercise 22"
     print("--- Solution 1 ---")
 
     ppText = url.urlopen("http://www.practicepython.org/assets/nameslist.txt").read()
-    ppText = ppText.decode("utf-8")
-    ppList = ppText.split()
+    ppText = ppText.decode("utf-8")    # I couldn't get the names as "bytes literals". So this conversion was needed.
+    ppList = ppText.split()    # Let's put the names in a list.
     ppDict = {}
 
     for i in ("Darth","Lea","Luke"):
@@ -18,31 +20,32 @@ def sol():
     print(ppDict)
     print("Total number of names is:",len(ppList), end="\n")
 
-# my solution for the "Extra" part of the exercise
-def sol_ext():
+def sol_ext():  # my solution for the "Extra" part of the exercise
     print("\n--- Extra Solution ---")
 
     ppText_ext = url.urlopen("http://www.practicepython.org/assets/Training_01.txt").read()
     ppText_ext = ppText_ext.decode("utf-8")
     ppList_ext = ppText_ext.split()
     ppSet_category = set()
-
+    
     for i in range(len(ppList_ext)):
-        find_NextSlash = ppList_ext[i].index("/",3,(len(ppList_ext)-1))
-        each_category = ppList_ext[i][3:find_NextSlash]
-        ppSet_category.add(each_category)
+    # It's always -for me anyway- fun to ponder over these for loops a few hours and keep the sanity at the end.
+    # So the main idea is finding the words between two slashes, e.g .../library/...    
+        find_NextSlash = ppList_ext[i].index("/",3,(len(ppList_ext)-1))    # [1]
+        each_category = ppList_ext[i][3:find_NextSlash]                    # [2]
+        ppSet_category.add(each_category)                                  # [3]
 
     print("The total number of images is:", len(ppList_ext))
     print("The total number of categories is:", len(ppSet_category), end="\n")
 
-    # you can use these:
-    # str.index(sub, start, end)
-    # str.find(sub, start, end)
-    # the idea: take the word between the two indices of two /forward slashes/
-
-
-sol()
+sol_1()
 sol_ext()
 
-# reference webpages: https://stackoverflow.com/questions/1393324/in-python-given-a-url-to-a-text-file-what-is-the-simplest-way-to-read-the-cont
-# files: http://www.practicepython.org/solution/2014/12/14/22-read-from-file-solutions.html
+## Comments:
+# [1]: All the lines has a slash at 2nd index. Thus we can check the words between the indices 3 and big-enough number, e.g ~length of that line. So this line of code tells us this: "Find me the next '/' after the 3rd index and do it for each line."
+# [2]: "Nice! Now let's pull the words out of these slashes' hands.
+# [3]: "Okay. Add the words into this set so it doesn't repeat again."
+
+## Note to myself:
+# Please read something about "bytes literals" and see what happens when we change it to string literals. What are the cons & pros?
+# Here is the link to this example: http://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html
