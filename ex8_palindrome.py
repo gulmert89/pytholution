@@ -12,19 +12,19 @@ palindrome_str = (input("Checking whether your input is a palindrome or not: ").
 
 palindrome = list(palindrome_str)
 
-palindrome_rev = palindrome[::-1]    # Please see the comment below.
-
+palindrome_back = palindrome[::-1]    # [1]
 print(palindrome_str, end="\n")
 
-if palindrome==palindrome_rev:
+if palindrome==palindrome_back:
     print("Your input is a palindrome.")
 else:
     print("Your input is not a palindrome.")
     
 # Note to myself:
-# I was trying to match the words letter by letter but I came up with this simple idea above like 3 hours later.
-# I don't know why I was trying the hard way. Maybe I would make it work as well later as a "Solution 2".
-# I'll revisit it later but let me put my old code here:
+# [1]: I was trying to match the words letter by letter but after spending 4 hours, I gave up and cheated this time :(
+# I don't know why I was trying the hard way but I still want to make it work and write it as another solution, "Solution 2" perhaps.
+# I'll revisit it later but let me put my old code here. It doesn't work for some of the words though.
+
 """
 pal= input("Checking whether your input is a palindrome or not: ")
 
