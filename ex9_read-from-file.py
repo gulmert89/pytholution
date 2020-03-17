@@ -2,23 +2,24 @@
 ## This is a basic file reading exercise about scraping names from the files.
 ## You can open nameslist.txt and Training_01.txt files (of which the links are given below) to see what is inside them.
 
-import urllib.request as url 
+import urllib.request as url
 ## I feel like I was playing in single player mode up to this point but now I have just seen how a multiplayer mode looks like.
 ## It's nice to import something from the net.
 
 def sol_1():    # my solution for "PracticePython.org - Exercise 22"
     print("--- Solution 1 ---")
 
-    ppText = url.urlopen("http://www.practicepython.org/assets/nameslist.txt").read()
-    ppText = ppText.decode("utf-8")    # I couldn't get the names as "bytes literals". So this conversion was needed.
-    ppList = ppText.split()    # Let's put the names in a list.
+    ppText = url.urlopen("http://www.practicepython.org/assets/nameslist.txt").read()    # This line says: "Alright, hold my beer. Imma get the file and read what's inside it."
+    ppText = ppText.decode("utf-8")    # So what's it? I'm not quite sure but I couldn't get the names out of the text since they are bytes literals. So this conversion was needed. Not sure why they were not usual strings but "bytes literals" in the first place.
+    ppList = ppText.split()    # Let's put the names in a list. It will easier to play with.
     ppDict = {}
 
     for i in ("Darth","Lea","Luke"):
-        ppDict[i] = ppList.count(i)
+        ppDict[i] = ppList.count(i)    # What I say here: "Find the name in the list, count how many times it appears and match the number to related name."
 
     print(ppDict)
     print("Total number of names is:",len(ppList), end="\n")
+
 
 def sol_ext():  # my solution for the "Extra" part of the exercise
     print("\n--- Extra Solution ---")
@@ -30,7 +31,7 @@ def sol_ext():  # my solution for the "Extra" part of the exercise
     
     for i in range(len(ppList_ext)):
     # It's always -for me anyway- fun to ponder over these for loops a few hours and keep the sanity at the end.
-    # So the main idea is finding the words between two slashes, e.g .../library/...    
+    # So the main idea here is finding the words between two slashes, e.g .../library/...    
         find_NextSlash = ppList_ext[i].index("/",3,(len(ppList_ext)-1))    # [1]
         each_category = ppList_ext[i][3:find_NextSlash]                    # [2]
         ppSet_category.add(each_category)                                  # [3]
