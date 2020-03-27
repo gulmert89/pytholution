@@ -18,7 +18,6 @@ consecutive strings : follow one after another without an interruption
 """
 # So, the code will give us the longest possible string made of two consecutive element in a given list.
 
-
 # Here is my correct solution:
 def longest_consec(strarr, k):
     if len(strarr)!=0 and k <= len(strarr) and k>0:    # working conditions
