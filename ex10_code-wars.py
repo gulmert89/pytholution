@@ -23,7 +23,6 @@ def longest_consec(strarr, k):
     if len(strarr)!=0 and k <= len(strarr) and k>0:    # working conditions
         max_list = []
         max_string = []
-                
         i = 0
         try:
             while i < len(strarr):
