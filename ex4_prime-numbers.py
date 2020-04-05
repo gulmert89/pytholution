@@ -1,6 +1,6 @@
 ### List of prime numbers up to a user defined point ###
 
-ep = int(input("Enter the end point: "))    #ep: end point
+ep = int(input("I'm going to list the prime numbers.\nEnter the end point please: "))    #ep: end point
 pl = []    #pl: prime list
 
 for i in range(1,ep):
