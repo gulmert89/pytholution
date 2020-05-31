@@ -9,7 +9,7 @@ import urllib.request as url
 def sol_1():    # my solution for "PracticePython.org - Exercise 22"
     print("--- Solution 1 ---")
 
-    ppText = url.urlopen("http://www.practicepython.org/assets/nameslist.txt").read()    # This line says: "Alright, hold my beer. Imma get the file and read what's inside it."
+    ppText = url.urlopen("http://www.practicepython.org/assets/nameslist.txt").read()    # This line says: "Alright, hold my beer. I'm gonna get the file and read what's inside it."
     ppText = ppText.decode("utf-8")    # So what's it? I'm not quite sure but I couldn't get the names out of the text since they are bytes literals. So this conversion was needed. Not sure why they were not usual strings but "bytes literals" in the first place.
     ppList = ppText.split()    # Let's put the names in a list. It will easier to play with.
     ppDict = {}
