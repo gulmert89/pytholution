@@ -20,4 +20,5 @@ If you are a beginner like me, some of these solutions may teach you too a few t
 
 **[Update]** In March, I started a bootcamp on Data Science and learned tons of stuff including deep learning and computer vision. So it wouldn't be logical to add here any code related to these subjects because they would have been way too advance considering the previous codes. Keeping here as a _pure python_ repository will be a better idea, imo. I feel like I'm on the verge of being a data scientist of any kind so when I find the job (and have the time), will keep here busy as well. Wish me luck on finding that job! I hope it will be the ***Journey of an ex-mechanical engineer in coding universe***!
 
-12) ...loading...
+12) **[Max Factor](https://github.com/gulmert89/pytholution/blob/master/ex12_why_simpler.py)**: Imagine I get a sponsor from such a conglomerate to one of my codes that no one reads :'D but no. This code is not about cosmetics. It's a simple example from the Project Euler. I would like to have this solution here because I am still surprised how I got it so simple!
+13) ...loading...
