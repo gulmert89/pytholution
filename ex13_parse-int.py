@@ -3,6 +3,8 @@
 # and shorter solution but I'll stick to mine for now.
 # PS: It took me a day to come up with a working solution.
 
+# There is actually 1 rule: Use a dash between two-digit numbers. i.e, "forty-five"
+
 def parse_int(string):
     # Let's define 'some' numbers
     zero_to_nineteen = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen"
