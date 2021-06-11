@@ -3,7 +3,8 @@
 # and shorter solution but I'll stick to mine for now.
 # PS: It took me a day to come up with a working solution.
 
-# There is actually 1 rule: Use a dash between two-digit numbers. i.e, "forty-five"
+# There is actually 1 rule: Use a dash between two-digit numbers > 19
+# i.e, "forty-five", "twenty-one" etc.
 
 def parse_int(string):
     # Let's define 'some' numbers
